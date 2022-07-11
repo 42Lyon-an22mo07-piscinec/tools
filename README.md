@@ -1,4 +1,6 @@
 # tools
+Pour installer, lancer depuis ce repertoire :
+'''sh install.sh'''
 
 ## .zshrc
 Alias qui facilitent la vie
