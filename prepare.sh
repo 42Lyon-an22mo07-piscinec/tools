@@ -8,7 +8,7 @@ cd $1_ready
 C0X_READY="$( pwd )"
 
 echo "Copie de ${1} dans ${C0X_READY}\n\nEnlève les fichiers en trop :\n"
-find -type f -name ".*" -delete -print -o -name "main.c" -delete -print -o -name "a.out" -delete -print
+find $C0X_READY -type f -name ".*" -delete -print -o -name "main.c" -delete -print -o -name "a.out" -delete -print
 
 echo "==============================================================================\n"
 echo "============= 1. TODO - Vérification manuelle du code source : ===============\n"
