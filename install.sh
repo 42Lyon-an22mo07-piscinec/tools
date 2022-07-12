@@ -6,7 +6,7 @@
 #    By: macourio <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/10 07:55:12 by macourio          #+#    #+#              #
-#    Updated: 2022/07/11 20:17:20 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/07/12 10:42:05 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ then
 	echo "\n\n#comp and norm aliases\n" >> ${HOME}/.zshrc
 	echo "alias norm='norminette -R CheckForbiddenSourceHeader ex*/ft*'" >> ${HOME}/.zshrc
 	echo "alias comp='gcc -Wall -Wextra -Werror *.c && ./a.out'" >> ${HOME}/.zshrc 
-	echo "alias prep='sh ${HOME}/tools/prepare.sh'" >> ${HOME}/.zshr
+	echo "alias prep='sh ${HOME}/tools/prepare.sh'" >> ${HOME}/.zshrc
 	echo "\n\n" >> ${HOME}/.zshrc
 	source ${HOME}/.zshrc
 else
