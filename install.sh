@@ -10,33 +10,33 @@
 #                                                                              #
 # **************************************************************************** #
 
-TOOLS="~/tools"
-if [[ -f "$TOOLS" ]]
+TOOLS="${HOME}/tools"
+if [ -d "$TOOLS" ]
 then
 	cd $TOOLS
 	git pull
 	echo "Tools already existing, updated"
 else
-	git clone https://github.com/42Lyon-an22mo07-piscinec/tools ~/tools
-	echo "Tools rep cloned in ~/tools - Don't rename it"
+	git clone https://github.com/42Lyon-an22mo07-piscinec/tools ${HOME}/tools
+	echo "Tools rep cloned in ${HOME}/tools - Don't rename it"
 fi
 
 FILE="$HOME/.zshrc"
-if [[ -f "$FILE" ]]
+if [ -f "$FILE" ]
 then
-	echo "\n\n#comp and norm aliases\n" >> ~/.zshrc
-	echo "alias norm='norminette -R CheckForbiddenSourceHeader ex*/ft*'" >> ~/.zshrc
-	echo "alias comp='gcc -Wall -Wextra -Werror *.c && ./a.out'" >> ~/.zshrc 
-	echo "alias prep='sh ~/tools/prepare.sh'" >> ~/.zshr
-	echo "\n\n" >> ~/.zshrc
-	source ~/.zshrc
+	echo "\n\n#comp and norm aliases\n" >> ${HOME}/.zshrc
+	echo "alias norm='norminette -R CheckForbiddenSourceHeader ex*/ft*'" >> ${HOME}/.zshrc
+	echo "alias comp='gcc -Wall -Wextra -Werror *.c && ./a.out'" >> ${HOME}/.zshrc 
+	echo "alias prep='sh ${HOME}/tools/prepare.sh'" >> ${HOME}/.zshr
+	echo "\n\n" >> ${HOME}/.zshrc
+	source ${HOME}/.zshrc
 else
-	echo "\n\n#comp and norm aliases\n" >> ~/.bashrc
-	echo "alias norm='norminette -R CheckForbiddenSourceHeader ex*/ft*'" >> ~/.bashrc
-	echo "alias comp='gcc -Wall -Wextra -Werror *.c && ./a.out'" >> ~/.bashrc 
-	echo "alias prep='sh ~/tools/prepare.sh'" >> ~/.bashrc
-	echo "\n\n" >> ~/.bashrc
-	source ~/.bashrc
+	echo "\n\n#comp and norm aliases\n" >> ${HOME}/.bashrc
+	echo "alias norm='norminette -R CheckForbiddenSourceHeader ex*/ft*'" >> ${HOME}/.bashrc
+	echo "alias comp='gcc -Wall -Wextra -Werror *.c && ./a.out'" >> ${HOME}/.bashrc 
+	echo "alias prep='sh ${HOME}/tools/prepare.sh'" >> ${HOME}/.bashrc
+	echo "\n\n" >> ${HOME}/.bashrc
+	source ${HOME}/.bashrc
 fi
 echo "Les alias des tools sont installés !!\nUse comp from any exYY folder with a main.c to compile and execute\nUse norm in any cXX folder to check the norm with flag CheckForbiddenSourceHeader for all ft_*.c\nUse prep cXX where you need to prepare the folder cXX to push. It will copy the folder to a cXX_ready, remove unwanted files, show the files and cat the source code for verification."
 echo "\nagaley"

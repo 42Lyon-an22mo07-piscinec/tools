@@ -9,4 +9,7 @@ Alias qui facilitent la vie
 - comp : compile tous les .c dun dossier avec les bons flags et execute (a lancer depuis exYY)
 - prep cXX : créé une copie du dossier passé en argument dans cXX_ready, enlève les fichiers en trop, imprime le code source, liste tous les fichiers et lance la norminette dessus
 
+N'hésitez pas à proposer vos contributions : résultats d'utilisation, bugs, propositions d'amélioration etc.
+Contribution = PR, issue ou message/MP sur Discord :)
+
 agaley
